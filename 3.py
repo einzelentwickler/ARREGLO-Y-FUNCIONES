@@ -1,6 +1,7 @@
 import random
 
 vehiculos = []
+multas = []
 
 def grabar():
     tipo = input("Ingrese el tipo de vehículo: ")
@@ -39,9 +40,11 @@ def grabar():
         "nombre_dueno": nombre_dueno
     }
 
+    
     vehiculos.append(vehiculo)
     print("Vehículo registrado correctamente.")
 
+    
 def buscar():
     patente = input("Ingrese la patente del vehículo a buscar: ")
     encontrado = False
@@ -87,8 +90,8 @@ while True:
     print("----- Auto Seguro -----")
     print("1. Grabar vehículo")
     print("2. Buscar vehículo")
-    print("3. Imprimir certificados")
-    print("4. Salir")
+    print("4. Imprimir certificados")
+    print("5. Salir")
     
     opcion = input("Ingrese una opción: ")
     
@@ -96,9 +99,9 @@ while True:
         grabar()
     elif opcion == "2":
         buscar()
-    elif opcion =="3":
-        imprimir_certificados()
     elif opcion == "4":
+        imprimir_certificados()
+    elif opcion == "5":
         salir()
         break
     else:
